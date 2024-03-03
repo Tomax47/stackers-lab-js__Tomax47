@@ -1,17 +1,18 @@
 // Task-1 
 
 function incremeant_array_numbers(arr) {
-    for (i = 0; i < arr.length; i++) {
-        arr[i] = (arr[i] + (i+1)) % 10;
+
+    let incremeantedArray = [...arr];
+    for (let i = 0; i < arr.length; i++) {
+        incremeantedArray[i] = (incremeantedArray[i] + (i+1)) % 10;
     }
 
-    return arr;
+    return incremeantedArray;
 }
 
 let arr = [1, 2, 4, 9, 7, 2];
-incremeant_array_numbers(arr);
 
-console.log(arr);
+console.log(`Original array : ${arr}\nIncremeanted array : ${incremeant_array_numbers(arr)}`);
 
 // Task-2 
 
